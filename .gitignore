@@ -1,4 +1,4 @@
-node_module/
+node_modules/
 cypress/downloads/
 cypress/videos/
 .DS_Store
