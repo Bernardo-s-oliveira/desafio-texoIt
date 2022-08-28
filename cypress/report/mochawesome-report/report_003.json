@@ -1,0 +1,144 @@
+{
+  "stats": {
+    "suites": 2,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2022-08-28T20:23:26.766Z",
+    "end": "2022-08-28T20:23:35.685Z",
+    "duration": 8919,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "3058b624-8ca0-4c9a-bbe3-2b5b3e9c70fd",
+      "title": "",
+      "fullFile": "cypress/integration/front-end/placeholderWeb.spec.js",
+      "file": "cypress/integration/front-end/placeholderWeb.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "9ffb1af7-c53c-4f37-92d4-aabd57c289b8",
+          "title": "Desafio web Texo It",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [],
+          "suites": [
+            {
+              "uuid": "c17c8f86-9a4d-4757-8fd7-b73eb109a220",
+              "title": "Dado que acesso a página jsonplaceholder",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "Quando navego até o link /albums/1/photos e abro",
+                  "fullTitle": "Desafio web Texo It Dado que acesso a página jsonplaceholder Quando navego até o link /albums/1/photos e abro",
+                  "timedOut": null,
+                  "duration": 4361,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.contains('/albums/1/photos').scrollIntoView().click();",
+                  "err": {},
+                  "uuid": "862f1489-fc24-4d9f-a037-4e903a1de9ac",
+                  "parentUUID": "c17c8f86-9a4d-4757-8fd7-b73eb109a220",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "Então realizo a validação do resultado",
+                  "fullTitle": "Desafio web Texo It Dado que acesso a página jsonplaceholder Então realizo a validação do resultado",
+                  "timedOut": null,
+                  "duration": 2598,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "fetch('https://jsonplaceholder.typicode.com/albums/1/photos').then(response => response.json()).then(data => {\n  for (var i = 0; i < data.length; i++) {\n    if (data[i].id == 6) {\n      expect(data[5].albumId).to.equal(1);\n      expect(data[5].id).to.equal(6);\n      expect(data[5].title).to.equal(\"accusamus ea aliquid et amet sequi nemo\");\n      expect(data[5].url).to.equal(\"https://via.placeholder.com/600/56a8c2\");\n      expect(data[5].thumbnailUrl).to.equal(\"https://via.placeholder.com/150/56a8c2\");\n      return;\n    }\n  }\n});",
+                  "err": {},
+                  "uuid": "a1eda04a-530b-4e7b-8d2f-972774c47eec",
+                  "parentUUID": "c17c8f86-9a4d-4757-8fd7-b73eb109a220",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "862f1489-fc24-4d9f-a037-4e903a1de9ac",
+                "a1eda04a-530b-4e7b-8d2f-972774c47eec"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 6959,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            }
+          ],
+          "passes": [],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 0,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "report",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/report/mochawesome-report",
+        "reportFilename": "report",
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

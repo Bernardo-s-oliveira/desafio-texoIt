@@ -1,0 +1,156 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 3,
+    "passes": 1,
+    "pending": 0,
+    "failures": 2,
+    "start": "2022-08-28T21:00:55.154Z",
+    "end": "2022-08-28T21:01:01.500Z",
+    "duration": 6346,
+    "testsRegistered": 3,
+    "passPercent": 33.33333333333333,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "ae2ec4a4-cadf-4ea8-a735-aef8dc467014",
+      "title": "",
+      "fullFile": "cypress/integration/front-end/placeholderWeb.spec.js",
+      "file": "cypress/integration/front-end/placeholderWeb.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "08e3bd79-8d87-4a00-89f0-2973417eb4ca",
+          "title": "Desafio web Texo It",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Dado que acesso a página jsonplaceholder",
+              "fullTitle": "Desafio web Texo It Dado que acesso a página jsonplaceholder",
+              "timedOut": null,
+              "duration": 1731,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "beforeEach(() => {\n  cy.visit('https://jsonplaceholder.typicode.com/guide/');\n});",
+              "err": {
+                "message": "CypressError: Cypress detected you registered a(n) `beforeEach` hook while a test was running (possibly a hook nested inside another hook). All hooks must be registered before a test begins executing.\n\nMove the `beforeEach` into a suite callback or the global scope.",
+                "estack": "CypressError: Cypress detected you registered a(n) `beforeEach` hook while a test was running (possibly a hook nested inside another hook). All hooks must be registered before a test begins executing.\n\nMove the `beforeEach` into a suite callback or the global scope.\n    at cypressErr (http://localhost:50657/__cypress/runner/cypress_runner.js:176336:18)\n    at Object.errByPath (http://localhost:50657/__cypress/runner/cypress_runner.js:176405:10)\n    at Suite._createHook (http://localhost:50657/__cypress/runner/cypress_runner.js:178189:84)\n    at Suite.../driver/node_modules/mocha/lib/suite.js.Suite.beforeEach (http://localhost:50657/__cypress/runner/cypress_runner.js:127167:19)\n    at Suite.<computed> [as beforeEach] (http://localhost:50657/__cypress/runner/cypress_runner.js:178199:23)\n    at beforeEach (http://localhost:50657/__cypress/runner/cypress_runner.js:121063:17)\nFrom Your Spec Code:\n    at Context.eval (http://localhost:50657/__cypress/tests?p=cypress\\integration\\front-end\\placeholderWeb.spec.js:107:5)",
+                "diff": null
+              },
+              "uuid": "cda87148-2281-41d6-ba24-0ab6d9115589",
+              "parentUUID": "08e3bd79-8d87-4a00-89f0-2973417eb4ca",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Quando navego até o link /albums/1/photos e abro",
+              "fullTitle": "Desafio web Texo It Quando navego até o link /albums/1/photos e abro",
+              "timedOut": null,
+              "duration": 4286,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.contains('/albums/1/photos').scrollIntoView().click();",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find content: '/albums/1/photos' but never did.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find content: '/albums/1/photos' but never did.\n    at Context.eval (http://localhost:50657/__cypress/tests?p=cypress\\integration\\front-end\\placeholderWeb.spec.js:112:8)",
+                "diff": null
+              },
+              "uuid": "577e6e8e-be25-4e6e-aefa-48349a19f8ba",
+              "parentUUID": "08e3bd79-8d87-4a00-89f0-2973417eb4ca",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Então realizo a validação do resultado",
+              "fullTitle": "Desafio web Texo It Então realizo a validação do resultado",
+              "timedOut": null,
+              "duration": 40,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "fetch('https://jsonplaceholder.typicode.com/albums/1/photos').then(response => response.json()).then(data => {\n  for (var i = 0; i < data.length; i++) {\n    if (data[i].id == 6) {\n      expect(data[5].albumId).to.equal(1);\n      expect(data[5].id).to.equal(6);\n      expect(data[5].title).to.equal(\"accusamus ea aliquid et amet sequi nemo\");\n      expect(data[5].url).to.equal(\"https://via.placeholder.com/600/56a8c2\");\n      expect(data[5].thumbnailUrl).to.equal(\"https://via.placeholder.com/150/56a8c2\");\n      return;\n    }\n  }\n});",
+              "err": {},
+              "uuid": "8557e8c4-5308-4cc1-aeba-0ce1d6b45517",
+              "parentUUID": "08e3bd79-8d87-4a00-89f0-2973417eb4ca",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "8557e8c4-5308-4cc1-aeba-0ce1d6b45517"
+          ],
+          "failures": [
+            "cda87148-2281-41d6-ba24-0ab6d9115589",
+            "577e6e8e-be25-4e6e-aefa-48349a19f8ba"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 6057,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "report",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/report/mochawesome-report",
+        "reportFilename": "report",
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "timestamp": "mmddyyyy_HHMMss",
+        "charts": true,
+        "cdn": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

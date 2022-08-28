@@ -12,7 +12,7 @@ describe('Desafio web Texo It', function(){
       it('Quando navego até o link /albums/1/photos e abro', () => {
          cy.contains('/albums/1/photos').scrollIntoView().click()
       })
-      it.only('Então realizo a validação do resultado', () => {
+      it('Então realizo a validação do resultado', () => {
          fetch('https://jsonplaceholder.typicode.com/albums/1/photos')
          .then((response) => response.json())
          .then((data) => {

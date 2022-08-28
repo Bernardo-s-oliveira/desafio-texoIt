@@ -5,12 +5,17 @@
       "reporter": "mochawesome",
       "reporterOptions": {
           "reportDir": "cypress/report/mochawesome-report",
-          "overwrite": true,
-          "html": true,
-          "json": false,
-          "timestamp": "mmddyyyy_HHMMss"
+          "reportFilename": "report",
+          "overwrite": false,
+          "html": false,
+          "json": true,
+          "timestamp": "mmddyyyy_HHMMss",
+          "charts": true,
+          "cdn": true
+          
       },
     "experimentalSessionAndOrigin": true,
     "pluginsFile": false,
-    "chromeWebSecurity": false 
+    "chromeWebSecurity": false,
+    "video": false
   }
