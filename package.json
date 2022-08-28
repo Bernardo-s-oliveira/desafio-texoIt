@@ -1,0 +1,23 @@
+{
+  "name": "desafio-texo-it",
+  "scripts": {
+    "cy:open": "cypress open",
+    "test": "cypress run"
+  },
+  "keywords": [
+    "Typeform",
+    "Cypress",
+    "API-Testing"
+  ],
+  "author": "Bernardo Oliveira",
+  "devDependencies": {
+    "cypress": "^9.5.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Bernardo-s-oliveira/desafio-texoIt.git"
+  },
+  "dependencies": {
+    "mochawesome": "^7.1.3"
+  }
+}

@@ -1,0 +1,4 @@
+node_module/
+cypress/downloads/
+cypress/videos/
+.DS_Store
