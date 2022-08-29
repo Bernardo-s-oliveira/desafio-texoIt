@@ -1,4 +1,6 @@
-# desafio-texo It
+# Projeto de automação
+Projeto de automação de testes de APIs Rest e web utilizou a tecnologia:
+- Cypress
 
 ## Pré requisito
 - É necessário ter o Node.js e o npm instalados para executar este projeto.
